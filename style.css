@@ -1,0 +1,84 @@
+/* Element selector */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #222;
+}
+
+/* Class selector */
+.site-header {
+    background-color: #1f2937;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+/* Element selector */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+}
+
+/* Class selector */
+.budget-summary,
+.add-expense,
+.expense-list {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+}
+
+/* Class selector */
+.summary-card {
+    display: inline-block;
+    width: 28%;
+    margin: 1%;
+    padding: 15px;
+    background-color: #e5e7eb;
+    border-radius: 6px;
+}
+
+/* Element selector */
+input,
+select,
+button {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    margin: 8px 0 18px;
+    box-sizing: border-box;
+}
+
+/* Element selector */
+button {
+    background-color: #2563eb;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+/* Descendant selector */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+/* Grouped selector */
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+/* Element selector */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1f2937;
+    color: white;
+}
