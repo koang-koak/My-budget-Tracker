@@ -1,36 +1,76 @@
-# SpendWise - Budget Tracker (Week 2 Upgrade)
+# Budget Tracker
 
-## Overview
-SpendWise is a static personal finance tracker built with HTML5 and CSS3. This version expands on the foundation created in Week 1 by introducing tables for structured expense tracking, an upgraded form with category options, interactive elements, multimedia, and advanced CSS selection techniques.
+## Project Description
 
----
+This project is a simple Budget Tracker created using HTML and CSS.
 
-## Features Implemented
+It allows users to enter expenses and displays sample expenses in a structured table. The project also includes multimedia content, a collapsible instructions section, and advanced CSS selectors.
 
-### 1. Expense Table
-* Structured using `<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, and `<td>`.
-* Styled using `border-collapse: collapse` and alternating row background colors (`tr:nth-child(even)`).
-* Includes a subtle background highlight on row hover (`tr:hover`).
+## Project Files
 
-### 2. Upgraded Expense Form
-* Wrapped in a proper `<form>` container.
-* Added a `<select>` drop-down list with 5 category options: *Food, Transport, Rent, Entertainment,* and *Other*.
-* Inputs feature distinct, matching `id` attributes ready for JavaScript integration.
-* Interactive submit button with `cursor: pointer`.
+### index.html
 
-### 3. Multimedia & Interactive Elements
-* **Logo Image (`<img>`):** Displayed next to the main header with descriptive `alt` text.
-* **Budgeting Video (`<iframe>`):** An embedded YouTube video offering financial advice.
-* **Collapsible Help (`<details>` & `<summary>`):** Explains how to navigate and use the application.
+The `index.html` file contains the structure of the Budget Tracker.
 
-### 4. Advanced CSS Selectors
-* **Descendant Selector (`.expenses-section td`):** Applies padding and alignment to all data cells inside the expenses section.
-* **Direct Child Selector (`.add-expense-section > form`):** Directs flexbox styling specifically to forms that are immediate children of the section.
-* **Positional Pseudo-Class (`tr:nth-child(even)`):** Creates alternating background shading across table rows.
-* **Focus State Pseudo-Class (`input:focus`):** Provides visual confirmation when input fields are active.
+It includes:
 
----
+- A page heading and budget icon
+- An Add Expense form
+- Expense name, amount, category, and date inputs
+- A category dropdown with five options
+- An Add Expense button
+- An expense table containing five sample expenses
+- A collapsible "How to use this tracker" section
+- An embedded YouTube budgeting video
+- A footer
 
-## How to View
-1. Clone or download this repository.
-2. Open `index.html` directly in any web browser.
+### style.css
+
+The `style.css` file controls the appearance of the Budget Tracker.
+
+It includes:
+
+- Page and section styling
+- Table borders and spacing
+- A colored table header
+- Alternating table row colors
+- Table row hover effects
+- Button styling
+- Input focus styling
+- Responsive video sizing
+- Advanced CSS selectors
+
+## Advanced CSS Selectors Used
+
+The project uses more than three advanced selectors required by the assignment:
+
+1. **Descendant selector**
+   - `.expenses-section td`
+   - `.expenses-section th`
+
+2. **Direct child selector**
+   - `.add-expense-section > h2`
+
+3. **Position pseudo-class**
+   - `tr:nth-child(even)`
+
+4. **Negation pseudo-class**
+   - `input:not([type="submit"])`
+
+5. **Focus pseudo-class**
+   - `input:focus`
+   - `select:focus`
+
+6. **Hover pseudo-class**
+   - `.expenses-section tbody tr:hover`
+
+## Multimedia
+
+The project includes:
+
+- An image using the `<img>` element with `src`, `alt`, and `width` attributes.
+- A YouTube video using an `<iframe>` with `width`, `height`, `title`, and `frameborder` attributes.
+
+## Future Improvements
+
+JavaScript can be added in future weeks to make the Add Expense button functional and allow users to dynamically add expenses to the table.

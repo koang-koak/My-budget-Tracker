@@ -1,86 +1,155 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <title>My Budget Tracker</title>
-    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-    <header class="site-header">
-        <h1>Personal Budget & Expense Tracker</h1>
-        <p>Track your income, expenses, and budget.</p>
+    <header>
+        <img
+            src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png"
+            alt="Budget tracker wallet icon"
+            width="70"
+        >
+        <h1>My Budget Tracker</h1>
+        <p>Track your expenses and manage your money wisely.</p>
     </header>
 
     <main>
-        <section class="budget-summary">
-            <h2>Budget Summary</h2>
 
-            <div class="summary-card">
-                <h3>Total Budget</h3>
-                <p>$0.00</p>
-            </div>
-
-            <div class="summary-card">
-                <h3>Total Expenses</h3>
-                <p>$0.00</p>
-            </div>
-
-            <div class="summary-card">
-                <h3>Remaining</h3>
-                <p>$0.00</p>
-            </div>
-        </section>
-
-        <section class="add-expense">
-            <h2>Add an Expense</h2>
+        <!-- Add Expense Form -->
+        <section class="add-expense-section">
+            <h2>Add Expense</h2>
 
             <form>
-                <label for="expense-name">Expense Name</label>
-                <input type="text" id="expense-name" name="expense-name">
+                <label for="expense-name">Expense Name:</label>
+                <input
+                    type="text"
+                    id="expense-name"
+                    name="expense-name"
+                    placeholder="e.g. Groceries"
+                >
 
-                <label for="expense-amount">Amount</label>
-                <input type="number" id="expense-amount" name="expense-amount">
+                <label for="expense-amount">Amount:</label>
+                <input
+                    type="number"
+                    id="expense-amount"
+                    name="expense-amount"
+                    placeholder="e.g. 1500"
+                >
 
-                <label for="expense-category">Category</label>
+                <label for="expense-category">Category:</label>
                 <select id="expense-category" name="expense-category">
-                    <option value="">Select a category</option>
                     <option value="food">Food</option>
                     <option value="transport">Transport</option>
-                    <option value="bills">Bills</option>
+                    <option value="rent">Rent</option>
                     <option value="entertainment">Entertainment</option>
                     <option value="other">Other</option>
                 </select>
 
-                <button type="submit">Add Expense</button>
+                <label for="expense-date">Date:</label>
+                <input
+                    type="date"
+                    id="expense-date"
+                    name="expense-date"
+                >
+
+                <button type="button">Add Expense</button>
             </form>
         </section>
 
-        <section class="expense-list">
-            <h2>Expenses</h2>
+
+        <!-- Expenses Table -->
+        <section class="expenses-section">
+            <h2>My Expenses</h2>
 
             <table>
                 <thead>
                     <tr>
-                        <th>Expense</th>
-                        <th>Category</th>
+                        <th>Name</th>
                         <th>Amount</th>
+                        <th>Category</th>
+                        <th>Date</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td>Example Expense</td>
+                        <td>Groceries</td>
+                        <td>KSh 2,500</td>
                         <td>Food</td>
-                        <td>$10.00</td>
+                        <td>2026-09-01</td>
+                    </tr>
+
+                    <tr>
+                        <td>Bus Fare</td>
+                        <td>KSh 500</td>
+                        <td>Transport</td>
+                        <td>2026-09-03</td>
+                    </tr>
+
+                    <tr>
+                        <td>House Rent</td>
+                        <td>KSh 20,000</td>
+                        <td>Rent</td>
+                        <td>2026-09-05</td>
+                    </tr>
+
+                    <tr>
+                        <td>Movie</td>
+                        <td>KSh 1,200</td>
+                        <td>Entertainment</td>
+                        <td>2026-09-10</td>
+                    </tr>
+
+                    <tr>
+                        <td>Phone Accessories</td>
+                        <td>KSh 1,000</td>
+                        <td>Other</td>
+                        <td>2026-09-15</td>
                     </tr>
                 </tbody>
             </table>
         </section>
+
+
+        <!-- How to Use -->
+        <section class="instructions-section">
+            <details>
+                <summary>How to use this tracker</summary>
+                <p>
+                    Enter the name, amount, category, and date of your expense
+                    in the form above. Click "Add Expense" to submit the form.
+                    The button will become functional when JavaScript is added
+                    in Week 7.
+                </p>
+            </details>
+        </section>
+
+
+        <!-- Multimedia -->
+        <section class="video-section">
+            <h2>Budgeting Tips</h2>
+
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/HQzoZfc3GwQ"
+                title="Budgeting tips video"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </section>
+
     </main>
 
     <footer>
-        <p>&copy; 2026 Personal Budget & Expense Tracker</p>
+        <p>&copy; 2026 My Budget Tracker</p>
     </footer>
 
 </body>

@@ -1,84 +1,148 @@
-/* Element selector */
+/* General page styling */
 body {
     font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
     margin: 0;
-    background-color: #f4f6f8;
-    color: #222;
+    padding: 0;
 }
 
-/* Class selector */
-.site-header {
-    background-color: #1f2937;
+/* Header */
+header {
+    background-color: #2e7d32;
     color: white;
     text-align: center;
     padding: 30px;
 }
 
-/* Element selector */
+header img {
+    display: block;
+    margin: 0 auto 10px;
+}
+
+h1,
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Main content */
 main {
     width: 90%;
     max-width: 1000px;
     margin: 30px auto;
 }
 
-/* Class selector */
-.budget-summary,
-.add-expense,
-.expense-list {
+/* Sections */
+.add-expense-section,
+.expenses-section,
+.instructions-section,
+.video-section {
     background-color: white;
-    padding: 20px;
+    padding: 25px;
     margin-bottom: 25px;
     border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
-/* Class selector */
-.summary-card {
-    display: inline-block;
-    width: 28%;
-    margin: 1%;
-    padding: 15px;
-    background-color: #e5e7eb;
-    border-radius: 6px;
+/* Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
-/* Element selector */
+/* Direct child selector */
+.add-expense-section > h2 {
+    color: #2e7d32;
+}
+
+/* Inputs and select */
 input,
-select,
-button {
-    display: block;
-    width: 100%;
-    max-width: 400px;
+select {
     padding: 10px;
-    margin: 8px 0 18px;
-    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-/* Element selector */
+/* Negation pseudo-class */
+input:not([type="submit"]) {
+    background-color: #fafafa;
+}
+
+/* Focus pseudo-class */
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #2e7d32;
+    box-shadow: 0 0 5px rgba(46, 125, 50, 0.3);
+}
+
+/* Button */
 button {
-    background-color: #2563eb;
+    background-color: #2e7d32;
     color: white;
     border: none;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
 }
 
-/* Descendant selector */
+button:hover {
+    background-color: #1b5e20;
+}
+
+/* Table */
 table {
     width: 100%;
     border-collapse: collapse;
 }
 
-/* Grouped selector */
-th,
-td {
+/* Descendant selector */
+.expenses-section td,
+.expenses-section th {
+    border: 1px solid #ddd;
     padding: 12px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
 }
 
-/* Element selector */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #1f2937;
+/* Colored header row */
+.expenses-section th {
+    background-color: #2e7d32;
     color: white;
+}
+
+/* Position-based pseudo-class */
+.expenses-section tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Hover effect */
+.expenses-section tbody tr:hover {
+    background-color: #dcedc8;
+}
+
+/* Details */
+details {
+    padding: 10px;
+}
+
+summary {
+    font-weight: bold;
+    color: #2e7d32;
+    cursor: pointer;
+}
+
+/* Video */
+.video-section iframe {
+    max-width: 100%;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
 }
