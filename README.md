@@ -1,76 +1,51 @@
-# Budget Tracker
+# SpendWise Dashboard
 
 ## Project Description
 
-This project is a simple Budget Tracker created using HTML and CSS.
+SpendWise is a modern personal finance dashboard designed to help users understand and monitor their spending.
 
-It allows users to enter expenses and displays sample expenses in a structured table. The project also includes multimedia content, a collapsible instructions section, and advanced CSS selectors.
+This week's project focuses on rebuilding the Budget Tracker layout using CSS Grid and Flexbox. The dashboard uses realistic static financial information and does not contain JavaScript functionality.
 
-## Project Files
+## Dashboard Features
 
-### index.html
+The dashboard contains:
 
-The `index.html` file contains the structure of the Budget Tracker.
+- SpendWise sidebar navigation
+- Dashboard header
+- User profile area
+- Available balance summary
+- Monthly income summary
+- Total spending summary
+- Food category
+- Transport category
+- Rent category
+- Entertainment category
+- Savings category
+- Utilities category
+- Recent transactions section
+- Spending progress indicators
+- Responsive mobile layout
+- Light and dark color themes
 
-It includes:
+## CSS Grid
 
-- A page heading and budget icon
-- An Add Expense form
-- Expense name, amount, category, and date inputs
-- A category dropdown with five options
-- An Add Expense button
-- An expense table containing five sample expenses
-- A collapsible "How to use this tracker" section
-- An embedded YouTube budgeting video
-- A footer
+CSS Grid is used for the main dashboard layout.
 
-### style.css
+The desktop layout contains:
 
-The `style.css` file controls the appearance of the Budget Tracker.
+- A fixed-width sidebar
+- A flexible main content area
 
-It includes:
+Grid is also used for:
 
-- Page and section styling
-- Table borders and spacing
-- A colored table header
-- Alternating table row colors
-- Table row hover effects
-- Button styling
-- Input focus styling
-- Responsive video sizing
-- Advanced CSS selectors
+- Financial summary cards
+- Spending category cards
 
-## Advanced CSS Selectors Used
+Example:
 
-The project uses more than three advanced selectors required by the assignment:
+```css
+.dashboard {
+    display: grid;
+    grid-template-columns: var(--sidebar-width) 1fr;
+}
 
-1. **Descendant selector**
-   - `.expenses-section td`
-   - `.expenses-section th`
-
-2. **Direct child selector**
-   - `.add-expense-section > h2`
-
-3. **Position pseudo-class**
-   - `tr:nth-child(even)`
-
-4. **Negation pseudo-class**
-   - `input:not([type="submit"])`
-
-5. **Focus pseudo-class**
-   - `input:focus`
-   - `select:focus`
-
-6. **Hover pseudo-class**
-   - `.expenses-section tbody tr:hover`
-
-## Multimedia
-
-The project includes:
-
-- An image using the `<img>` element with `src`, `alt`, and `width` attributes.
-- A YouTube video using an `<iframe>` with `width`, `height`, `title`, and `frameborder` attributes.
-
-## Future Improvements
-
-JavaScript can be added in future weeks to make the Add Expense button functional and allow users to dynamically add expenses to the table.
